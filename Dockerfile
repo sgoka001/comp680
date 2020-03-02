@@ -2,7 +2,7 @@
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
 
 # Copy project files
-WORKDIR /
+WORKDIR /app
 COPY ["comp680.csproj", "./comp680.csproj"]
 
 # Restore
@@ -12,7 +12,7 @@ RUN dotnet restore "./comp680.csproj"
 COPY . .
 
 # Publish
-WORKDIR /
+WORKDIR /app
 RUN dotnet publish -c Release -o /publish
 
 # Runtime
