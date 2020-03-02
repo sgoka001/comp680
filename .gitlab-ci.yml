@@ -33,6 +33,6 @@ deploy_staging:
     - echo "Deploy to staging server"
   environment:
     name: staging
-    url: 35.225.21.213
+    url: 104.197.218.202.xip.io
   only:
   - master
