@@ -30,4 +30,15 @@ docker-build:
     - docker push "$CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG"
   except:
     - master
+    
+deploy_staging:
+  stage: deploy
+  script:
+    - echo "Deploy to staging server"
+  environment:
+    name: staging
+    kubernetes:
+      namespace: "$KUBE_NAMESPACE"
+  only:
+  - master
 
