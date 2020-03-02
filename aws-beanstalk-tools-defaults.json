@@ -2,10 +2,10 @@
 {
     "comment" : "This file is used to help set default values when using the dotnet CLI extension Amazon.ElasticBeanstalk.Tools. For more information run \"dotnet eb --help\" from the project root.",
     "profile" : "default",
-    "region"  : "us-west-2",
-    "application" : "comp680",
-    "environment" : "comp680-dev",
+    "region"  : "us-east-1",
+    "application" : "comp680App",
+    "environment" : "Comp680app-env",
     "iis-website" : "Default Web Site",
     "app-path"    : "/",
-    "enable-xray" : false
+    "enable-xray" : true
 }
