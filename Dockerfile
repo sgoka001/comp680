@@ -16,7 +16,7 @@ WORKDIR /app
 RUN dotnet publish -c Release -o /publish
 
 # Runtime
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
-WORKDIR /app
-COPY --from=build /app ./
+FROM mcr.microsoft.com/dotnet/core/runtime:3.1 AS runtime
+WORKDIR /bin/Debug/netcoreapp3.1/
+COPY --from=build / .
 ENTRYPOINT ["dotnet", "comp680.dll"]
