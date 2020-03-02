@@ -26,3 +26,13 @@ docker-build:
     - docker push "$CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG"
   except:
     - master
+
+deploy_staging:
+  stage: deploy
+  script:
+    - echo "Deploy to staging server"
+  environment:
+    name: staging
+    url: 35.225.21.213
+  only:
+  - master
