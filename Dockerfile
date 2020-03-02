@@ -2,7 +2,7 @@
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
 
 # Copy project files
-WORKDIR 
+WORKDIR /
 COPY ["comp680.csproj", "./comp680.csproj"]
 
 # Restore
@@ -12,11 +12,11 @@ RUN dotnet restore "./comp680.csproj"
 COPY . .
 
 # Publish
-WORKDIR 
+WORKDIR /
 RUN dotnet publish -c Release -o /publish
 
 # Runtime
 FROM mcr.microsoft.com/dotnet/core/runtime:3.1 AS runtime
-WORKDIR /publish
-COPY --from=build-env /publish .
+WORKDIR /
+COPY --from=build-env / .
 ENTRYPOINT ["dotnet", "comp680.dll"]
