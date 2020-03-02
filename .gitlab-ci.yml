@@ -33,6 +33,7 @@ deploy_staging:
     - echo "Deploy to staging server"
   environment:
     name: staging
-    url: 104.197.218.202.xip.io
+    kubernetes:
+      namespace: "$KUBE_NAMESPACE"
   only:
   - master
