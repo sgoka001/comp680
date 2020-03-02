@@ -1,5 +1,5 @@
 # Define base image
-FROM microsoft/dotnet:3.1-sdk AS build-env
+FROM docker pull mcr.microsoft.com/dotnet/core/aspnet AS build-env
 
 # Copy project files
 WORKDIR /source
