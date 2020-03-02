@@ -19,3 +19,15 @@ build:
   stage: build
   tags: 
     - docker
+    
+deploy_staging:
+  stage: deploy
+  script:
+    - echo "Deploy to staging server"
+  environment:
+    name: staging
+    url: 35.225.21.213
+  when: manual
+  only:
+  - master
+    
