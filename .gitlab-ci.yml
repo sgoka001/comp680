@@ -1,12 +1,28 @@
-development:
-  type: deploy
-  environment: production
+image: java:8-jdk
+
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  allow_failure: false
   script:
-  - mkdir ~/.aws/
-  - touch ~/.aws/credentials
-  - printf "[eb-cli]\naws_access_key_id = %s\naws_secret_access_key = %s\n" "$AWS_ACCESS_KEY_ID" "$AWS_SECRET_ACCESS_KEY" >> ~/.aws/credentials
-  - touch ~/.aws/config
-  - printf "[profile eb-cli]\nregion=us-west-2\noutput=json" >> ~/.aws/config
-  - eb deploy comp680-dev
-  only:
-  - master
+    - ./gradlew clean build test war
+  artifacts:
+    paths:
+      - build/libs/comp680.war
+
+deploy:
+  image: python:latest
+  stage: deploy
+  script:
+    - pip install awscli
+    - aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID
+    - aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
+    - aws configure set region us-west-2
+    - aws s3 cp build/libs/comp680.war s3://elasticbeanstalk-us-west-2-11111222222233/comp680-$CI_PIPELINE_ID.war
+    - aws elasticbeanstalk create-application-version --application-name comp680 --version-label comp680-$CI_PIPELINE_ID --source-bundle S3Bucket=elasticbeanstalk-us-west-2-11111222222233,S3Key=mySampleApp-$CI_PIPELINE_ID.war
+    - aws elasticbeanstalk update-environment --application-name comp680 --environment-name comp680-env --version-label comp680-$CI_PIPELINE_ID
+  dependencies:
+    - build
