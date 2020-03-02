@@ -1,5 +1,5 @@
 # Define base image
-FROM mcr.microsoft.com/dotnet/core/sdk:3.0 AS build
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
 
 # Copy project files
 WORKDIR /source
@@ -16,7 +16,7 @@ WORKDIR /source/src
 RUN dotnet publish -c Release -o /publish
 
 # Runtime
-FROM mcr.microsoft.com/dotnet/core/runtime:3.0 AS runtime
+FROM mcr.microsoft.com/dotnet/core/runtime:3.1 AS runtime
 WORKDIR /publish
 COPY --from=build-env /publish .
 ENTRYPOINT ["dotnet", "comp680.dll"]
