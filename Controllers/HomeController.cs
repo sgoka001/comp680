@@ -23,7 +23,7 @@ namespace comp680.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Points()
         {
             return View();
         }

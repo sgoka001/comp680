@@ -2048,11 +2048,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gokans01\\Source\\Repos\\sgoka001\\comp680\\comp680.csproj",
+      "projectUniqueName": "C:\\Users\\gokans01\\source\\repos\\comp680\\comp680.csproj",
       "projectName": "comp680",
-      "projectPath": "C:\\Users\\gokans01\\Source\\Repos\\sgoka001\\comp680\\comp680.csproj",
+      "projectPath": "C:\\Users\\gokans01\\source\\repos\\comp680\\comp680.csproj",
       "packagesPath": "C:\\Users\\gokans01\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gokans01\\Source\\Repos\\sgoka001\\comp680\\obj\\",
+      "outputPath": "C:\\Users\\gokans01\\source\\repos\\comp680\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
