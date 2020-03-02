@@ -27,13 +27,20 @@ docker-build:
   except:
     - master
 
-deploy_staging:
-  stage: deploy
-  script:
-    - echo "Deploy to staging server"
-  environment:
-    name: staging
-    kubernetes:
-      namespace: "$KUBE_NAMESPACE"
-  only:
-  - master
+deploy:
+ image: 'gcloud-with-envsubst:latest'
+ stage: deploy
+ variables:
+ DOCKER_IMAGE_TAG: 'eu.gcr.io/my-project/my-application:latest'
+ script:
+ # Authenticate with GKE
+ — echo "$SERVICE_ACCOUNT_KEY" > key.json
+ — gcloud auth activate-service-account --key-file=key.json
+ — gcloud config set project my-project
+ — gcloud config set container/cluster my-cluster
+ — gcloud config set compute/zone europe-west2-a
+ — gcloud container clusters get-credentials my-cluster --zone europe-west2-a# Do the deployment
+ — cat kubernetes/my-application-deployment.yaml | envsubst | kubectl apply -f -environment:
+ name: test
+only:
+ — master
