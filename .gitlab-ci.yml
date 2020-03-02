@@ -1,44 +1,12 @@
-# This file is a template, and might need editing before it works on your project.
-stages:
- - build
- - deploy
-
-docker-build-master:
-  # Official docker image.
-  image: docker:latest
-  stage: build
-  services:
-    - docker:dind
-  before_script:
-    - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
+development:
+  type: deploy
+  environment: production
   script:
-    - docker build --pull -t "$CI_REGISTRY_IMAGE" .
-    - docker push "$CI_REGISTRY_IMAGE"
-  only:
-    - master
-
-docker-build:
-  # Official docker image.
-  image: docker:latest
-  stage: build
-  services:
-    - docker:dind
-  before_script:
-    - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
-  script:
-    - docker build --pull -t "$CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG" .
-    - docker push "$CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG"
-  except:
-    - master
-    
-deploy_staging:
-  stage: deploy
-  script:
-    - echo "Deploy to staging server"
-  environment:
-    name: staging
-    kubernetes:
-      namespace: "$KUBE_NAMESPACE"
+  - mkdir ~/.aws/
+  - touch ~/.aws/credentials
+  - printf "[eb-cli]\naws_access_key_id = %s\naws_secret_access_key = %s\n" "$AWS_ACCESS_KEY_ID" "$AWS_SECRET_ACCESS_KEY" >> ~/.aws/credentials
+  - touch ~/.aws/config
+  - printf "[profile eb-cli]\nregion=us-west-2\noutput=json" >> ~/.aws/config
+  - eb deploy comp680-dev
   only:
   - master
-
