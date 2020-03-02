@@ -18,5 +18,5 @@ RUN dotnet publish -c Release -o /publish
 # Runtime
 FROM mcr.microsoft.com/dotnet/core/runtime:3.1 AS runtime
 WORKDIR /bin/Debug/netcoreapp3.1/
-COPY --from=build-env /bin/Debug/netcoreapp3.1/ .
+COPY --from=build /bin/Debug/netcoreapp3.1/ .
 ENTRYPOINT ["dotnet", "comp680.dll"]
