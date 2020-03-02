@@ -1,5 +1,5 @@
 # Define base image
-FROM docker pull mcr.microsoft.com/dotnet/core/aspnet AS build-env
+FROM mcr.microsoft.com/dotnet/core/aspnet AS build-env
 
 # Copy project files
 WORKDIR /source
