@@ -28,6 +28,31 @@ namespace comp680.Controllers
             return View();
         }
 
+        public IActionResult Rebounds()
+        {
+            return View();
+        }
+
+        public IActionResult Assists()
+        {
+            return View();
+        }
+
+        public IActionResult Steals()
+        {
+            return View();
+        }
+
+        public IActionResult Blocks()
+        {
+            return View();
+        }
+
+        public IActionResult TripleDoubles()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
