@@ -25,6 +25,8 @@
       "comp680/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore": "2.2.0",
+          "Microsoft.AspNetCore.Server.IISIntegration": "2.2.1",
+          "Microsoft.AspNetCore.Server.Kestrel": "2.2.0",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions.Reference": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "3.1.0.0",
@@ -313,7 +315,7 @@
           "Microsoft.AspNetCore.Hosting": "2.2.0",
           "Microsoft.AspNetCore.Routing": "2.2.0",
           "Microsoft.AspNetCore.Server.IIS": "2.2.0",
-          "Microsoft.AspNetCore.Server.IISIntegration": "2.2.0",
+          "Microsoft.AspNetCore.Server.IISIntegration": "2.2.1",
           "Microsoft.AspNetCore.Server.Kestrel": "2.2.0",
           "Microsoft.AspNetCore.Server.Kestrel.Https": "2.2.0",
           "Microsoft.Extensions.Configuration.CommandLine": "2.2.0",
@@ -458,7 +460,7 @@
           "System.Security.Principal.Windows": "4.5.0"
         }
       },
-      "Microsoft.AspNetCore.Server.IISIntegration/2.2.0": {
+      "Microsoft.AspNetCore.Server.IISIntegration/2.2.1": {
         "dependencies": {
           "Microsoft.AspNetCore.Authentication.Core": "2.2.0",
           "Microsoft.AspNetCore.Hosting.Abstractions": "2.2.0",
@@ -2483,12 +2485,12 @@
       "path": "microsoft.aspnetcore.server.iis/2.2.0",
       "hashPath": "microsoft.aspnetcore.server.iis.2.2.0.nupkg.sha512"
     },
-    "Microsoft.AspNetCore.Server.IISIntegration/2.2.0": {
+    "Microsoft.AspNetCore.Server.IISIntegration/2.2.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-iVjgAg+doTTrTFCOq6kZRpebXq94YGCx9efMIwO5QhwdY/sHAjfrVz2lXzji63G96YjJVK3ZRrlpgS2fd49ABw==",
-      "path": "microsoft.aspnetcore.server.iisintegration/2.2.0",
-      "hashPath": "microsoft.aspnetcore.server.iisintegration.2.2.0.nupkg.sha512"
+      "sha512": "sha512-Yzjx64GXNm6uteHQr1jCTJP+VB/6FndMyALud2CQpGmBWqXfklqctmncvLPtvljn5Y9stZNeECDUNrReFC8VRA==",
+      "path": "microsoft.aspnetcore.server.iisintegration/2.2.1",
+      "hashPath": "microsoft.aspnetcore.server.iisintegration.2.2.1.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Server.Kestrel/2.2.0": {
       "type": "package",

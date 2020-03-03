@@ -91,7 +91,6 @@ C:\Users\gokans01\source\repos\comp680\bin\Debug\netcoreapp3.1\Microsoft.AspNetC
 C:\Users\gokans01\source\repos\comp680\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions.dll
 C:\Users\gokans01\source\repos\comp680\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 C:\Users\gokans01\source\repos\comp680\obj\Debug\netcoreapp3.1\comp680.csprojAssemblyReference.cache
-C:\Users\gokans01\source\repos\comp680\obj\Debug\netcoreapp3.1\comp680.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\gokans01\source\repos\comp680\obj\Debug\netcoreapp3.1\comp680.RazorAssemblyInfo.cache
 C:\Users\gokans01\source\repos\comp680\obj\Debug\netcoreapp3.1\comp680.RazorAssemblyInfo.cs
 C:\Users\gokans01\source\repos\comp680\obj\Debug\netcoreapp3.1\comp680.AssemblyInfoInputs.cache
@@ -114,3 +113,4 @@ C:\Users\gokans01\source\repos\comp680\obj\Debug\netcoreapp3.1\staticwebassets\c
 C:\Users\gokans01\source\repos\comp680\obj\Debug\netcoreapp3.1\comp680.dll
 C:\Users\gokans01\source\repos\comp680\obj\Debug\netcoreapp3.1\comp680.pdb
 C:\Users\gokans01\source\repos\comp680\obj\Debug\netcoreapp3.1\Razor\Views\Home\Points.cshtml.g.cs
+C:\Users\gokans01\source\repos\comp680\obj\Debug\netcoreapp3.1\comp680.MvcApplicationPartsAssemblyInfo.cache
