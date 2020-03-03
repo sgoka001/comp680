@@ -1,0 +1,14 @@
+{
+  "manifestVersion": 1,
+  "deployments": {
+    "aspNetCoreWeb": [
+      {
+        "name": "comp680",
+        "parameters": {
+          "archive": "comp680.zip",
+          "iisPath": "/"
+        }
+      }
+    ]
+  }
+}
