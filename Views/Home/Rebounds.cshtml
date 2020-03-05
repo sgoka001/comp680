@@ -1,10 +1,17 @@
 @{
     ViewData["Title"] = "2019-2020 NBA Season Rebound Leaders";
 }
-<h1>@ViewData["Title"]</h1>
+@if (User.Identity.IsAuthenticated)
+{
+    <h1>@ViewData["Title"]</h1>
 
-<p>1. Andre Drummond - 15.3 Rebounds Per Game</p>
-<p>2. Hassan Whiteside - 14.2 Rebounds Per Game</p>
-<p>3. Rudy Gobert - 14.1 Rebounds Per Game</p>
-<p>4. Giannis Antetokounmpo - 13.8 Rebounds Per Game </p>
-<p>5. Domantas Sabonis - 12.5 Rebounds Per Game</p>
+    <p>1. Andre Drummond - 15.3 Rebounds Per Game</p>
+    <p>2. Hassan Whiteside - 14.2 Rebounds Per Game</p>
+    <p>3. Rudy Gobert - 14.1 Rebounds Per Game</p>
+    <p>4. Giannis Antetokounmpo - 13.8 Rebounds Per Game </p>
+    <p>5. Domantas Sabonis - 12.5 Rebounds Per Game</p>
+}
+else
+{
+    <h1>Please log in to see these statistics.</h1>
+}

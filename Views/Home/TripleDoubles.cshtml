@@ -1,10 +1,18 @@
 @{
     ViewData["Title"] = "2019-2020 NBA Season Triple Double Leaders";
 }
-<h1>@ViewData["Title"]</h1>
 
-<p>1. LeBron James - 13 Triple Doubles</p>
-<p>2. Luka Doncic - 13 Triple Doubles</p>
-<p>3. Nikola Jokic - 12 Triple Doubles</p>
-<p>4. Russell Westbrook - 8 Triple Doubles</p>
-<p>5. Ben Simmons - 6 Triple Doubles</p>
+@if (User.Identity.IsAuthenticated)
+{
+    <h1>@ViewData["Title"]</h1>
+
+    <p>1. LeBron James - 13 Triple Doubles</p>
+    <p>2. Luka Doncic - 13 Triple Doubles</p>
+    <p>3. Nikola Jokic - 12 Triple Doubles</p>
+    <p>4. Russell Westbrook - 8 Triple Doubles</p>
+    <p>5. Ben Simmons - 6 Triple Doubles</p>
+}
+else
+{
+    <h1>Please log in to see these statistics.</h1>
+}
