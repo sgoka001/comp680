@@ -10,7 +10,7 @@
         <thead>
             <tr>
                 <th>
-                    Sr.
+                    Rank
                 </th>
                 <th>
                     Team Name
@@ -23,7 +23,7 @@
             </tr>
         </thead>
         <tbody>
-            @for (int i = 0; i < Model.Count(); i++)
+            @for (int i = 0; i < 5; i++) //CRASHES FOR ANY NUMBER > 5
             {
                 <tr>
                     <td>@(i+1)</td>
@@ -40,3 +40,6 @@ else
 {
     <h1>Please log in to see these statistics.</h1>
 }
+<div class="teams">
+    <img src="~/css/NFLinside.jpg" height="700" width="1100" />
+</div>

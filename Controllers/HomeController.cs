@@ -25,7 +25,7 @@ namespace comp680.Controllers
             return View();
         }
 
-         public async System.Threading.Tasks.Task<IActionResult> NHLAsync()
+         public async System.Threading.Tasks.Task<IActionResult> NHL()
         {
             //Now define your asynchronous method which will retrieve all your pokemon.
             //Define your baseUrl
@@ -88,7 +88,7 @@ namespace comp680.Controllers
             return View();
         }
 
-        public async System.Threading.Tasks.Task<IActionResult> NFLAsync()
+        public async System.Threading.Tasks.Task<IActionResult> NFL()
         {
             //Now define your asynchronous method which will retrieve all your pokemon.
             //Define your baseUrl
