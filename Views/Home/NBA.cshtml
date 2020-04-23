@@ -1,0 +1,17 @@
+@{
+    ViewData["Title"] = "2019-2020 NBA STANDINGS";
+}
+@if (User.Identity.IsAuthenticated)
+{
+    <h1>@ViewData["Title"]</h1>
+
+    <p>1. MILWUAKEE BUCKS MIL</p>
+    <p>2. LOS ANGELES LAKERS LAL</p>
+    <p>3. LOS ANGELES CLIPPERS LAC</p>
+    <p>4. BOSTON CELTICS BOS </p>
+    <p>5. UTAH JAZZ UTA</p>
+}
+else
+{
+    <h1>Please log in to see these statistics.</h1>
+}

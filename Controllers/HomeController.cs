@@ -59,7 +59,7 @@ namespace comp680.Controllers
                                     fbt.TeamDisplayName = jObj["team"]["displayName"].ToString();
                                     fbt.TeamAbbreviation = jObj["team"]["abbreviation"].ToString();
                                     fbt.TeamShortDisplayName = jObj["team"]["shortDisplayName"].ToString();
-                                    if (i == 5)
+                                    if (i == 10) //ALLOWS ONLY THE TOP 10 RESULTS
                                         break;
 
                                     lstTeams.Add(fbt);
@@ -83,7 +83,7 @@ namespace comp680.Controllers
         }
 
 
-        public IActionResult Rebounds()
+        public IActionResult NBA()
         {
             return View();
         }
@@ -122,7 +122,7 @@ namespace comp680.Controllers
                                     fbt.TeamDisplayName = jObj["team"]["displayName"].ToString();
                                     fbt.TeamAbbreviation = jObj["team"]["abbreviation"].ToString();
                                     fbt.TeamShortDisplayName = jObj["team"]["shortDisplayName"].ToString();
-                                    if (i == 5)
+                                    if (i == 10) //ALLOWS ONLY THE TOP 10 RESULTS
                                         break;
 
                                     lstTeams.Add(fbt);

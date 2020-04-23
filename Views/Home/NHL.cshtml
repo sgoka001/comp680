@@ -1,5 +1,5 @@
 ﻿@{
-    ViewData["Title"] = "2019-2020 NHL Leaders";
+    ViewData["Title"] = "2019-2020 NHL STANDINGS";
 }
 @if (User.Identity.IsAuthenticated)
 {
@@ -23,7 +23,7 @@
             </tr>
         </thead>
         <tbody>
-            @for (int i = 0; i < 5; i++) //CRASHES FOR ANY NUMBER > 5
+            @for (int i = 0; i < 10; i++) //CRASHES FOR ANY NUMBER > 10
             {
                 <tr>
                     <td>@(i+1)</td>
