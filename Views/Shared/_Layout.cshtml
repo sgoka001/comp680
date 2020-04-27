@@ -19,17 +19,20 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     @if (User.Identity.IsAuthenticated)
                     {
-                        <ul class="navbar-nav flex-grow-1">
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="NFL"> <img src="~/css/NFLlogo.jpg" height="50" width="100" /> NFL Standings</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="NBA">  <img src="~/css/NBAlogo.jpg" height="50" width="100" /> NBA Standings</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="NHL"> <img src="~/css/NHLlogo.png" height="50" width="100" /> NHL Standings</a>
-                            </li>
-                        </ul>
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="NFL"> <img src="~/css/NFLlogo.jpg" height="50" width="100" /> NFL Standings</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="NBA">  <img src="~/css/NBAlogo.jpg" height="50" width="100" /> NBA Standings</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="NHL"> <img src="~/css/NHLlogo.png" height="50" width="100" /> NHL Standings</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Soccer"> <img src="~/css/NHLlogo.png" height="50" width="100" /> Soccer Standings</a>
+                        </li>
+                    </ul>
                     }
                     </div>
                 <!-- AUTH0 authentication-->
