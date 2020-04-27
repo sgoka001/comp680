@@ -1,11 +1,11 @@
 @{
-    ViewData["Title"] = "2019-2020 Soccer STANDINGS";
+    ViewData["Title"] = "2019-2020 EPL STANDINGS";
 }
 @if (User.Identity.IsAuthenticated)
 {
 <h1>@ViewData["Title"]</h1>
 
-<h4>Soccer teams</h4>
+<h4>EPL teams</h4>
 <table border="1" style="width:100%;">
     <thead>
         <tr>
@@ -41,5 +41,5 @@ else
 <h1>Please log in to see these statistics.</h1>
 }
 <div class="teams">
-    <img src="~/css/NFLinside.jpg" height="700" width="1100" />
+    <img src="~/css/EPLinside.jpg" height="700" width="1100" />
 </div>

@@ -145,7 +145,7 @@ namespace comp680.Controllers
             return View(lstTeams);
         }
 
-        public async System.Threading.Tasks.Task<IActionResult> Soccer()
+        public async System.Threading.Tasks.Task<IActionResult> EPL()
         {
             //Now define your asynchronous method which will retrieve all your pokemon.
             //Define your baseUrl
