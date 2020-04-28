@@ -4,19 +4,38 @@
 @if (User.Identity.IsAuthenticated)
 {
     <h1>@ViewData["Title"]</h1>
+
     <h4>Basketball teams</h4>
-
-
-    <p>1. MILWUAKEE BUCKS MIL</p>
-    <p>2. LOS ANGELES LAKERS LAL</p>
-    <p>3. TORONTO RAPTORS TOR</p>
-    <p>4. LOS ANGELES CLIPPERS LAC</p>
-    <p>5. BOSTON CELTICS BOS </p>
-    <p>6. DENVER NUGGETS DEN </p>
-    <p>7. UTAH JAZZ UTA</p>
-    <p>8. MIAMI HEAT MIA</p>
-    <p>9. OKLAHOMA CITY THUNDER OKC</p>
-    <p>10. HOUSTON ROCKETS HOU</p>
+    <table border="1" style="width:100%;">
+        <thead>
+            <tr>
+                <th>
+                    Rank
+                </th>
+                <th>
+                    Team Name
+                </th>
+                <th>
+                    Display Name
+                </th>
+                <th>Abbreviation</th>
+                <th>Short Display Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (int i = 0; i < 10; i++) //CRASHES FOR ANY NUMBER > 10
+            {
+                <tr>
+                    <td>@(i+1)</td>
+                    <td>@Model[i].TeamName</td>
+                    <td>@Model[i].TeamDisplayName</td>
+                    <td>@Model[i].TeamAbbreviation</td>
+                    <td>@Model[i].TeamShortDisplayName</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <h4> Source: ESPN (https://site.api.espn.com/apis/v2/sports/basketball/nba/standings)</h4>
 }
 else
 {
